@@ -9,13 +9,3 @@ USER gitpod
 #
 # More information: https://www.gitpod.io/docs/config-docker/
 
-
-RUN sudo apt-get update && sudo apt-get upgrade -y
-RUN sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
-RUN curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-RUN ["sudo", "add-apt-repository", "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable"]
-RUN sudo apt-get update
-RUN sudo apt-get install docker-ce docker-ce-cli containerd.io -y
-RUN curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube
-RUN sudo mkdir -p /usr/local/bin/
-RUN sudo install minikube /usr/local/bin/
