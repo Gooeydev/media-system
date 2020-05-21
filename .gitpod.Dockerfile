@@ -9,4 +9,4 @@ USER gitpod
 #
 # More information: https://www.gitpod.io/docs/config-docker/
 
-RUN sudo apt update && sudo apt install docker.io
+RUN sudo apt update && sudo apt install docker.io -y
