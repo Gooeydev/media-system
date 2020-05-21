@@ -15,4 +15,4 @@ RUN sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent so
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 RUN ["sudo", "add-apt-repository", "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable"]
 RUN sudo apt-get update
-RUN sudo apt-get install docker-ce docker-ce-cli containerd.io
+RUN sudo apt-get install docker-ce docker-ce-cli containerd.io -y
