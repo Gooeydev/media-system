@@ -16,7 +16,6 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 RUN ["sudo", "add-apt-repository", "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable"]
 RUN sudo apt-get update
 RUN sudo apt-get install docker-ce docker-ce-cli containerd.io -y
-RUN sudo apt install snapd -y
-RUN sudo snap install microk8s --classic --channel=1.18/stable
-RUN sudo usermod -a -G microk8s gitpod
-RUN sudo chown -f -R gitpod ~/.kube
+RUN curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube
+RUN sudo mkdir -p /usr/local/bin/
+RUN sudo install minikube /usr/local/bin/
